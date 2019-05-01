@@ -1,0 +1,27 @@
+//THIS IS MY CODE FOR THE RANDOM COMMANDS. for the const names (example, reply) you can call them whatever you want
+//if you're going to use this code many times, i recommend short names that are specific to the command's use because you can't repeat the const names
+//example: my consts for the hello command are hey and hello, question words one are question and answer, etc
+
+ const example = [
+	"here you put the things you want the bot to reply to", 
+	"it can be several things!", 
+	"but make sure it doesn't overlap with other commands",
+	"for example if you have two different commands that reply to hello the bot will answer two things to one message",
+	"also you don't have to but i like putting each one on a different line so it's easier to read"
+	];
+  
+  const reply = [
+	"and here goes the replies!",
+	"here you get to go crazy go stupid",
+	"the more the better",
+	"otherwise the bot will probably stick to one response",
+	"in my experience it'll usually use the longest response",
+	"so for variety try to stick to similar lengths!"
+	];
+
+//here you shouldn't change anything except for example and reply, which are the const names. change them to whatever you wrote above
+   if(example.some(word => msg.includes(word))) {
+    var response = reply [Math.floor(Math.random() * reply.length)];
+      
+    message.channel.send(response).then().catch(console.error);
+  } else;
